@@ -6,9 +6,11 @@ body{
 
 nav > div{
     background-color: rgb(255, 97, 39);
-    margin: 40px;
-    padding: 10px;
-    border-radius: 20px;
+    margin: 10vh;
+    padding: 1.3vh;
+    border-radius: 10vh;
+    position: relative;
+    z-index: 2;
 }
 
 nav button{
@@ -20,22 +22,24 @@ nav button{
     background: none;
 }
 
-nav div + div{
+nav > div + div{
     background: none;
     margin: none;
+    padding: none;
+    position: relative;
+    z-index: 1;
 }
 
-nav div + div > div{
-    background-color: rgb(255, 97, 39);
-    margin: -10px;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-nav div + div > div + div {
+nav div + div > div {
     background-color: aliceblue;
-    margin-top: 10px;
-    padding: 15px;
+    margin-top: -16.7vh;
+    margin-left: -1.3vh;
+    margin-right: -1.3vh;
+    padding: 4vh;
+    padding-left: 2vh;
+    padding-top: 7vh;
+    padding-bottom: 2vh;
+    border-radius: 3vh;
 }
 
 nav a{
@@ -46,8 +50,7 @@ nav a{
     font-weight: 300;
     font-style: bold;
     color: rgb(34, 34, 34);
-    border: none;
-    margin-left: 30px;
+    margin-left: 5vh;
 }
 
 nav a:hover{
@@ -55,11 +58,12 @@ nav a:hover{
 }
 
 body > div{
+    position: fixed;
     background: none;
-    padding: 300px;
-    padding-left: 625px;
+    padding: 27.77vh;
+    padding-left: 78vh;
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 3vh;
     font-weight: 300;
     color: aliceblue;
 }
