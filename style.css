@@ -22,24 +22,14 @@ nav button{
     background: none;
 }
 
-nav > div + div{
-    background: none;
-    margin: none;
-    padding: none;
+nav > div + div {
+    background-color: aliceblue;
+    margin: 10vh;
+    margin-top: -15.4vh;
+    padding: 1.3vh;
+    border-radius: 10vh;
     position: relative;
     z-index: 1;
-}
-
-nav div + div > div {
-    background-color: aliceblue;
-    margin-top: -16.7vh;
-    margin-left: -1.3vh;
-    margin-right: -1.3vh;
-    padding: 4vh;
-    padding-left: 2vh;
-    padding-top: 7vh;
-    padding-bottom: 2vh;
-    border-radius: 3vh;
 }
 
 nav a{
@@ -55,6 +45,16 @@ nav a{
 
 nav a:hover{
     color: rgb(255, 97, 39);
+}
+
+.option-menu.active, .option-menu.flipping{
+    visibility: visible;
+    padding-top: 7vh;
+    border-radius: 4vh;
+}
+
+.option-menu{
+    visibility: hidden;
 }
 
 body > div{

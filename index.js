@@ -1,17 +1,31 @@
+gsap.registerPlugin(Flip);
+
+const option_menu = document.querySelector(".option-menu");
+
+document.querySelector(".menu-button").textContent = "☰";
+
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("menu-button").addEventListener(
-        "click",
+    document.querySelector(".menu-button").addEventListener(
+        "click" ,
         () => {
-            buttonText = document.getElementById("menu-button").textContent;
-            if(buttonText === "☰") {
-                document.getElementById("hidden-menu").hidden = false;
-                document.getElementById("menu-button").textContent = "⚟";
+            let buttonText = document.querySelector(".menu-button").textContent;
+            if (buttonText === "☰") {
+                document.querySelector(".menu-button").textContent = "⚟";
             } else {
-                document.getElementById("hidden-menu").hidden = true;
-                document.getElementById("menu-button").textContent = "☰";
+                document.querySelector(".menu-button").textContent = "☰";
             }
-        },
-        false
+
+            const state = Flip.getState(".option-menu");
+
+            option_menu.classList.toggle("active");
+
+            Flip.from(state, {
+                duration: 0,
+                fade: true,
+                absolute: true,
+                toggleClass: "flipping",
+                ease: "power1.inOut"
+            });
+        }
     );
-    }
-);
+});     
